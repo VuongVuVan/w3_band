@@ -322,6 +322,8 @@ html {
 .contact-form .send-btn {
     float: right;
     margin-top: 24px;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .map-section img {

@@ -1,0 +1,59 @@
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+}
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    #footer .social-list a {
+        font-size: 4rem;
+        margin: 0 16px;
+    }
+
+    #footer .copyright {
+        font-size: 1.8rem;
+    }
+
+    #footer .copyright a {
+        padding: 10px 0;
+        display: inline-block;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .s-col-full {
+        flex-basis: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+    
+    #header .search-btn {
+        display: none;
+    }
+
+    #header .toggle-btn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #nav {
+        flex-basis: 100%;
+    }
+
+    #nav > li {
+        flex-basis: 100%;
+    }
+
+    #nav > li:not(:first-child) {
+        display: none;
+    }
+
+    #nav > li:first-child {
+        flex-basis: unset;
+    }
+}

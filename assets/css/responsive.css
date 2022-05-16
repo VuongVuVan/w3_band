@@ -6,8 +6,9 @@
 /* Mobile & Tablet */
 @media (max-width: 1023px) {
     #footer .social-list a {
-        font-size: 4rem;
-        margin: 0 16px;
+        font-size: 3.4rem;
+        margin: 10px 25px 0;
+        display: inline-block;
     }
 
     #footer .copyright {

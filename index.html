@@ -170,10 +170,17 @@
             }
         }
 
-        toggleBtn.ontouchstart = toggleNav;
+        function hideNav(e) {
+            const navItems = document.querySelectorAll("#nav > li:not(:first-child)");
+            for(var i = 0; i < navItems.length; i++) {
+                navItems[i].classList.remove("active");
+            }
+        }
+
+        toggleBtn.ontouchend = toggleNav;
 
         for(var i = 0; i < navItems.length; i++) {
-            navItems[i].onclick = toggleNav;
+            navItems[i].onclick = hideNav;
         }
 
         const navItems2 = document.querySelectorAll("#nav .js-subnav-container > a[href='#']");

@@ -162,6 +162,13 @@
     <script>
         const toggleBtn = document.querySelector("#header .js-toggle-btn");
         const navItems = document.querySelectorAll("#nav li:not(.js-subnav-container)");
+        const subNav = document.querySelectorAll(".subnav");
+
+        function hideSubNav() {
+            for(var i = 0; i < subNav.length; i++) {
+                subNav[i].classList.remove("active");
+            }
+        }
 
         // Open and hide nav items
         function toggleNav(e) {
@@ -169,6 +176,7 @@
             for(var i = 0; i < navItems.length; i++) {
                 navItems[i].classList.toggle("active");
             }
+            hideSubNav();
         }
 
         function hideNav(e) {
@@ -176,6 +184,7 @@
             for(var i = 0; i < navItems.length; i++) {
                 navItems[i].classList.remove("active");
             }
+            hideSubNav();
         }
 
         toggleBtn.ontouchend = toggleNav;
@@ -188,6 +197,13 @@
         for(var i = 0; i < navItems2.length; i++) {
             navItems2[i].onclick = e => {
                 e.preventDefault();
+            }
+        }
+
+        const subNavContainers = document.querySelectorAll(".js-subnav-container");
+        for(var i = 0; i < subNavContainers.length; i++) {
+            subNavContainers[i].onclick = function(e) {
+                this.querySelector(".subnav").classList.toggle("active");
             }
         }
     </script>

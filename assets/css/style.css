@@ -121,9 +121,9 @@ html {
     background-color: #ccc;
 }
 
-#nav > li:hover .subnav {
+/* #nav > li:hover .subnav {
     display: block;
-}
+} */
 
 #nav .subnav {
     position: absolute;

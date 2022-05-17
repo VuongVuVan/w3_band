@@ -57,4 +57,14 @@
     #nav > li:first-child {
         flex-basis: unset;
     }
+
+    #nav .subnav {
+        position: unset;
+        background-color: #000;
+    }
+    
+    #nav .subnav li a {
+        color: #fff;
+        padding: 15px 45px;
+    }
 }

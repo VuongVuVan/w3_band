@@ -133,15 +133,15 @@ html {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     display: none;
+    min-width: 150px;
+    font-size: 1.5rem;
 }
 
 #nav .subnav li a {
     color: #000;
     text-decoration: none;
-    font-size: 1.5rem;
     display: block;
     padding: 10px 20px;
-    min-width: 150px;
 }
 
 #nav .subnav li:hover a {

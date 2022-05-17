@@ -17,7 +17,7 @@
                 <li><a href="#band">Band</a></li>
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
+                <li class="js-subnav-container">
                     <a href="#">
                         More
                         <i class="bi bi-caret-down-fill"></i>
@@ -32,7 +32,7 @@
             <div class="search-btn">
                 <i class="bi bi-search"></i>
             </div>
-            <div class="toggle-btn">
+            <div class="toggle-btn js-toggle-btn">
                 <i class="bi bi-list"></i>
             </div>
         </div>
@@ -159,11 +159,27 @@
     </div>
 
     <script>
-        const toggleBtn = document.querySelector("#header .toggle-btn");
-        const navItems = document.querySelectorAll("#nav > li:not(:first-child)");
-        toggleBtn.ontouchstart = e => {
+        const toggleBtn = document.querySelector("#header .js-toggle-btn");
+        const navItems = document.querySelectorAll("#nav li:not(.js-subnav-container)");
+
+        // Open and hide nav items
+        function toggleNav(e) {
+            const navItems = document.querySelectorAll("#nav > li:not(:first-child)");
             for(var i = 0; i < navItems.length; i++) {
                 navItems[i].classList.toggle("active");
+            }
+        }
+
+        toggleBtn.ontouchstart = toggleNav;
+
+        for(var i = 0; i < navItems.length; i++) {
+            navItems[i].onclick = toggleNav;
+        }
+
+        const navItems2 = document.querySelectorAll("#nav .js-subnav-container > a[href='#']");
+        for(var i = 0; i < navItems2.length; i++) {
+            navItems2[i].onclick = e => {
+                e.preventDefault();
             }
         }
     </script>
